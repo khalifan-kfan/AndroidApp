@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu
+xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<item android:title="Dashboard"
+    android:id="@+id/nav_dashbord">
+    <menu>
+
+        <group android:checkableBehavior="single">
+
+            <item android:title="DashBoard"
+                android:id="@+id/nav_Home"
+                android:icon="@drawable/ic_home"
+                />
+
+            <item android:title="My Saccos"
+                android:id="@+id/nav_profile"
+                android:icon="@drawable/ic_sacco"/>
+
+            <item
+                android:id="@+id/nav_match_center"
+                android:icon="@drawable/ic_wallet"
+                android:title="Accounts" />
+
+            <item
+                android:id="@+id/nav_Transactions"
+                android:icon="@drawable/ic_transactions"
+                android:title="Media-Center" />
+
+            <item
+                android:id="@+id/nav_Settings"
+                android:icon="@drawable/ic_settings"
+                android:title="@string/settings"
+                />
+
+            <item
+                android:id="@+id/nav_Account"
+                android:icon="@drawable/ic_account_circle"
+                android:title="Manage" />
+
+        </group>
+    </menu>
+</item>
+    <item android:title="Share"
+
+        android:id="@+id/nav_call"
+        android:icon="@drawable/ic_call"/>
+
+    <item android:title="Call US"
+
+    android:id="@+id/nav_share"
+    android:icon="@drawable/ic_baseline_share_24"/>
+
+
+<item android:title="Rims version 1.0">
+
+    <menu></menu>
+</item>
+</menu>

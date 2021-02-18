@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "512945890859",
+    "project_id": "eazy-sacco",
+    "storage_bucket": "eazy-sacco.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:512945890859:android:e687e01fe1baa7a1586c6e",
+        "android_client_info": {
+          "package_name": "com.okellomwaka.eazysacco"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "512945890859-m1h76ugtkm3997lqgsjsl3kq9hi5lbqe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2Bva5nv2j8OFmzjCIdrINMxn38xxBPc8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "512945890859-m1h76ugtkm3997lqgsjsl3kq9hi5lbqe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
