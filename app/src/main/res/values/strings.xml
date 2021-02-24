@@ -30,4 +30,17 @@
     <string name="acc_bal3">100000</string>
 
 
+    <string-array name="Account_Numbers">
+        <item>001-SACC0-Cocis- 0023</item>
+        <item>001-SACC0-KAmpala- 0124</item>
+        <item>003-SACC0-CSY1- 0023</item>
+        <item>004-SACC0-CSY1- 0001</item>
+    </string-array>
+
+    <string-array name="Saving_Period">
+        <item>Month</item>
+        <item>Years</item>
+    </string-array>
+    <string name="title_activity_sacco_maps">Map</string>
+
 </resources>

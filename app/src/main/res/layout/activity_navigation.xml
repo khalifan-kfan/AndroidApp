@@ -33,14 +33,6 @@ tools:context=".NavigationActivity">
            android:id="@+id/line1"
            >
 
-           <androidx.appcompat.widget.Toolbar
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:id="@+id/toolbar"
-               android:background="@color/colorPrimary"
-               app:title="@string/app_name"
-
-               />
            <LinearLayout android:id="@+id/balance"
                android:layout_width="match_parent"
                android:layout_height="wrap_content"
@@ -151,6 +143,7 @@ tools:context=".NavigationActivity">
                 android:gravity="center"
                 android:orientation="vertical"
 
+                android:onClick="load_Add_Sacco"
 
                 app:layout_constraintDimensionRatio="H,1:1"
                 app:layout_constraintEnd_toStartOf="@+id/layoutSacco"
@@ -197,6 +190,7 @@ tools:context=".NavigationActivity">
                 android:padding="5dp"
                 app:layout_constraintDimensionRatio="H, 1:1"
 
+                android:onClick="View_Sacco"
 
                 app:layout_constraintStart_toEndOf="@id/layoutEmail"
                 app:layout_constraintTop_toTopOf="parent">
@@ -232,6 +226,8 @@ tools:context=".NavigationActivity">
 
                 android:gravity="center"
                 android:orientation="vertical"
+
+                android:onClick="Load_Transactions"
 
                 app:layout_constraintDimensionRatio="H, 1:1"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -272,6 +268,8 @@ tools:context=".NavigationActivity">
                 android:orientation="vertical"
                 android:padding="5dp"
 
+                android:onClick="Load_Deposit"
+
                 app:layout_constraintDimensionRatio="H, 1:1"
 
                 app:layout_constraintEnd_toStartOf="@+id/layoutProfile"
@@ -309,6 +307,8 @@ tools:context=".NavigationActivity">
                 android:orientation="vertical"
                 android:padding="5dp"
 
+
+                android:onClick="Load_Profile"
 
                 app:layout_constraintDimensionRatio="H, 1:1"
                 app:layout_constraintEnd_toEndOf="parent"

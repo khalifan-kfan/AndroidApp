@@ -12,13 +12,7 @@
         android:id="@+id/line1"
         >
 
-        <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/toolbar"
-        android:background="@color/colorPrimary"
-        app:title="@string/app_name"
-        />
+
         <LinearLayout android:id="@+id/balance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -37,7 +31,7 @@
                 android:textAllCaps="true"
                 android:textColor="@color/black"
                 android:padding="2dp"
-                android:textSize="24sp"
+                android:textSize="18sp"
                 android:text="Sacco Account No." />
             <TextView
                 android:id="@+id/available_balance"
@@ -102,17 +96,17 @@
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Monday" />
+                android:text="All Transaction" />
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tuesday" />
+                android:text="Deposits" />
 
             <com.google.android.material.tabs.TabItem
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Wednesday" />
+                android:text="Withdrawals" />
         </com.google.android.material.tabs.TabLayout>
 
     </LinearLayout>

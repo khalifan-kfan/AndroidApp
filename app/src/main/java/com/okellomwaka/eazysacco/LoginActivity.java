@@ -87,7 +87,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 progressBar.setVisibility(View.GONE);
                 if (!task.isSuccessful()){
-                    Toast.makeText(LoginActivity.this, "Login In User Failed", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, "Login In User In User", Toast.LENGTH_SHORT).show();
 
                 } else {
                     Toast.makeText(LoginActivity.this, "Login In User", Toast.LENGTH_SHORT).show();
@@ -100,7 +100,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void updateUi() {
-        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+        Intent intent = new Intent(LoginActivity.this, NavigationActivity.class);
      //   Intent intent = new Intent(LoginActivity.this, NavigationActivity.class);
         startActivity(intent);
     }

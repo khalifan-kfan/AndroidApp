@@ -16,16 +16,18 @@ import com.google.android.material.navigation.NavigationView;
 public class MainActivity extends AppCompatActivity {
 
 
-    private Toolbar toolbar;
+  //  private Toolbar toolbar;
 
-    private DrawerLayout drawerLayout;
-    private NavigationView navigationView;
+  //  private DrawerLayout drawerLayout;
+   // private NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        toolbar = findViewById(R.id.main_toolbar);
+
+
+       /* toolbar = findViewById(R.id.main_toolbar);
         setSupportActionBar(toolbar);
 
         drawerLayout = findViewById(R.id.drawer_layout);
@@ -43,11 +45,11 @@ public class MainActivity extends AppCompatActivity {
         actionBarDrawerToggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
 
-
+*/
 
     }
 
-    @Override
+ /*   @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         return false;
     }
@@ -56,4 +58,5 @@ public class MainActivity extends AppCompatActivity {
     public void onPointerCaptureChanged(boolean hasCapture) {
 
     }
+    */
 }

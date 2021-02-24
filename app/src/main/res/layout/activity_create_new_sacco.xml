@@ -6,4 +6,250 @@
     android:layout_height="match_parent"
     tools:context=".CreateNewSaccoActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/line1"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout android:id="@+id/balance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line1"
+            android:orientation="vertical"
+            android:background="@color/colorBackground"
+            android:gravity="center"
+            >
+            <TextView
+                android:id="@+id/select_Account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/cerapro_medium"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+
+                android:textSize="20sp"
+                android:text="User Name" />
+
+            f
+            <LinearLayout
+                android:id="@+id/balanceInside"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/balance"
+                android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:background="@color/colorBackground"
+                android:gravity=""
+                >
+                <TextView
+                    android:id="@+id/account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/cerapro_medium"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+
+                    android:textSize="16sp"
+                    android:text="Sacco Name" />
+
+                   <EditText
+
+                    android:id="@+id/etSaccoName"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@color/colorWhite"/>
+
+                <TextView
+                    android:id="@+id/amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/cerapro_medium"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:padding="2dp"
+                    android:textSize="16sp"
+                    android:text="Minimun Savings Amount" />
+                <LinearLayout
+                    android:id="@+id/layout_Amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/balance"
+                    android:orientation="horizontal"
+                    android:background="@color/colorBackground"
+                    android:gravity="">
+                    <EditText
+                        android:inputType="number"
+                        android:id="@+id/etDeposit"
+                        android:layout_margin="5dp"
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:background="@color/colorWhite"/>
+                    <TextView
+                        android:id="@+id/Ugx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/cerapro_medium"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+
+                        android:textSize="28sp"
+                        android:text="/ugx" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/period"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+
+                    android:fontFamily="@font/cerapro_medium"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+
+                    android:textSize="16sp"
+                    android:text="Savings Period" />
+                <LinearLayout
+                    android:id="@+id/layout_period"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/balance"
+                    android:orientation="horizontal"
+                    android:background="@color/colorBackground"
+                    android:gravity="">
+                    <EditText
+                        android:inputType="number"
+                        android:id="@+id/etsperiod"
+
+                        android:layout_width="120dp"
+                        android:layout_height="35dp"
+                        android:background="@color/colorWhite"/>
+
+                    <Spinner
+                        android:background="@color/colorWhite"
+                        android:id="@+id/spinner1"
+                        android:layout_marginStart="20dp"
+                        android:layout_width="150dp"
+                        android:layout_height="35dp"
+                         />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/amountmin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/cerapro_medium"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:padding="2dp"
+                    android:textSize="16sp"
+                    android:text="Membership Fee" />
+                <LinearLayout
+                    android:id="@+id/layout_min_saving_Amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/balance"
+                    android:orientation="horizontal"
+                    android:background="@color/colorBackground"
+                    android:gravity="">
+                    <EditText
+                        android:inputType="number"
+                        android:id="@+id/etSavingAmount"
+
+                        android:layout_width="200dp"
+                        android:layout_height="35dp"
+                        android:background="@color/colorWhite"/>
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/cerapro_medium"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+
+                        android:textSize="28sp"
+                        android:text="/ugx" />
+
+                </LinearLayout>
+
+
+
+
+                <TextView
+                    android:id="@+id/Period"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/cerapro_medium"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:padding="2dp"
+                    android:textSize="16sp"
+                    android:text="Contact Number" />
+
+                <EditText
+                    android:maxLength="10"
+                    android:inputType="number"
+                    android:id="@+id/etDepositNumber"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@color/colorWhite"/>
+
+                <Button
+                    android:id="@+id/button_LoadLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_margin="10dp"
+                    android:text="Load Location"
+                    android:onClick="Load_Location"/>
+                <TextView
+                    android:id="@+id/Sacco_Location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/cerapro_medium"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+
+                    android:textSize="15sp"
+                    android:text="Saco-Location Cordinates" />
+                <Button
+                    android:id="@+id/button_Deposit"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_margin="10dp"
+                    android:text="Create Sacco"
+                    android:onClick="Create_Sacco"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
