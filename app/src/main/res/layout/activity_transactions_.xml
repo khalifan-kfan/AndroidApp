@@ -94,16 +94,19 @@
             android:layout_alignParentLeft="true">
 
             <com.google.android.material.tabs.TabItem
+                android:id="@+id/all_transactions"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="All Transaction" />
 
             <com.google.android.material.tabs.TabItem
+                android:id="@+id/deposit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Deposits" />
 
             <com.google.android.material.tabs.TabItem
+                android:id="@+id/withdraws"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Withdrawals" />

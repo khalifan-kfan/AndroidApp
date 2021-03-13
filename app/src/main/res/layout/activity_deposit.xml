@@ -14,14 +14,15 @@
         android:id="@+id/line1"
         >
 
-        <LinearLayout android:id="@+id/balance"
+        <LinearLayout
+            android:id="@+id/balance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/line1"
-            android:orientation="vertical"
             android:background="@color/colorBackground"
             android:gravity="center"
-            >
+            android:orientation="vertical">
+
             <TextView
                 android:id="@+id/select_Account"
                 android:layout_width="wrap_content"
@@ -29,11 +30,11 @@
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:fontFamily="@font/cerapro_medium"
+                android:padding="2dp"
+                android:text="User Name"
                 android:textAllCaps="true"
                 android:textColor="@color/black"
-                android:padding="2dp"
-                android:textSize="24sp"
-                android:text="User Name" />
+                android:textSize="24sp" />
 
             <ProgressBar
                 android:id="@+id/progress_bar"
@@ -42,8 +43,10 @@
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/balanceInside"
                 android:layout_alignParentStart="true"
-                android:layout_marginBottom="16dp"
                 android:layout_alignParentLeft="true"
+                android:layout_marginBottom="16dp"
+                android:indeterminate="true"
+                android:visibility="gone"
                 tools:ignore="NotSibling" />
 
             <LinearLayout
@@ -51,11 +54,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/balance"
-                android:orientation="vertical"
                 android:layout_margin="10dp"
                 android:background="@color/colorBackground"
                 android:gravity=""
-                >
+                android:orientation="vertical">
+
                 <TextView
                     android:id="@+id/account"
                     android:layout_width="wrap_content"
@@ -63,17 +66,17 @@
                     android:layout_marginTop="2dp"
                     android:layout_marginBottom="5dp"
                     android:fontFamily="@font/cerapro_medium"
+                    android:padding="2dp"
+                    android:text="Choose Account"
                     android:textAllCaps="true"
                     android:textColor="@color/black"
-                    android:padding="2dp"
-                    android:textSize="16sp"
-                    android:text="Choose Account" />
+                    android:textSize="16sp" />
 
                 <Spinner
-                    android:background="@color/colorWhite"
                     android:id="@+id/spinner1"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
+                    android:background="@color/colorWhite"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
@@ -87,41 +90,42 @@
                     android:layout_marginTop="2dp"
                     android:layout_marginBottom="5dp"
                     android:fontFamily="@font/cerapro_medium"
+                    android:padding="2dp"
+                    android:text="Enter Amount"
                     android:textAllCaps="true"
                     android:textColor="@color/black"
-                    android:padding="2dp"
-                    android:textSize="16sp"
-                    android:text="Enter Amount" />
+                    android:textSize="16sp" />
+
                 <LinearLayout
                     android:id="@+id/layout_Amount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/balance"
-                    android:orientation="horizontal"
                     android:background="@color/colorBackground"
-                    android:gravity="">
+                    android:gravity=""
+                    android:orientation="horizontal">
+
                     <EditText
-                        android:inputType="number"
                         android:id="@+id/etDeposit"
-                        android:layout_margin="10dp"
                         android:layout_width="200dp"
                         android:layout_height="50dp"
-                        android:background="@color/colorWhite"/>
+                        android:layout_margin="10dp"
+                        android:background="@color/colorWhite"
+                        android:inputType="number" />
+
                     <TextView
                         android:id="@+id/Ugx"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
                         android:fontFamily="@font/cerapro_medium"
+                        android:text="/ugx"
                         android:textAllCaps="true"
-                        android:textColor="@color/black"
 
-                        android:textSize="28sp"
-                        android:text="/ugx" />
+                        android:textColor="@color/black"
+                        android:textSize="28sp" />
 
                 </LinearLayout>
-
-
 
                 <TextView
                     android:id="@+id/Depositnumber"
@@ -130,35 +134,36 @@
                     android:layout_marginTop="2dp"
                     android:layout_marginBottom="5dp"
                     android:fontFamily="@font/cerapro_medium"
+                    android:padding="2dp"
+                    android:text="Enter Number"
                     android:textAllCaps="true"
                     android:textColor="@color/black"
-                    android:padding="2dp"
-                    android:textSize="16sp"
-                    android:text="Enter Number" />
+                    android:textSize="16sp" />
 
                 <EditText
-                    android:maxLength="10"
-                    android:inputType="number"
                     android:id="@+id/etDepositNumber"
-                    android:layout_margin="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:background="@color/colorWhite"/>
+                    android:layout_margin="10dp"
+                    android:background="@color/colorWhite"
+                    android:inputType="number"
+                    android:maxLength="10" />
+
                 <Button
                     android:id="@+id/button_Deposit"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
-                    android:layout_marginEnd="40dp"
-                    android:layout_marginStart="40dp"
                     android:layout_margin="10dp"
-                    android:text="Deposit"
-                    android:onClick="Make_Deposit"/>
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:onClick="Make_Deposit"
+                    android:text="Deposit" />
+
+
 
 
             </LinearLayout>
         </LinearLayout>
-
-
 
     </LinearLayout>
 
