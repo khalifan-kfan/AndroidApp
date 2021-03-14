@@ -1,14 +1,7 @@
 package com.okellomwaka.eazysacco.Models;
 
 public class transaction extends  DocId {
-/*      pay.put("amount", amount.getText().toString());
-        pay.put("mobile", phone_number.getText().toString());
-        pay.put("externalId", externalId);
-        pay.put("userId",auth.getCurrentUser().getUid());
-        pay.put("transactionId",ref);
-        pay.put("account", account);
 
- */
     String amount;
     String mobile;
     String externalId;
@@ -23,6 +16,9 @@ public class transaction extends  DocId {
         this.userId = userId;
         this.transactionId = transactionId;
         this.account = account;
+    }
+
+    public transaction() {
     }
 
     public String getAmount() {

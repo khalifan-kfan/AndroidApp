@@ -24,6 +24,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import com.okellomwaka.eazysacco.Models.deposit;
 import com.okellomwaka.eazysacco.Models.transaction;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -69,6 +70,7 @@ public class Alltransactions_Fragment extends Fragment {
         firestore = FirebaseFirestore.getInstance();
         auth = FirebaseAuth.getInstance();
         // Set the adapter
+        transactions =  new ArrayList<transaction>();
         if (v instanceof RecyclerView) {
             Context context = v.getContext();
             RecyclerView recyclerView = (RecyclerView) v;
@@ -77,11 +79,11 @@ public class Alltransactions_Fragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new AlltransactionsAdaptor(transactions,context));
+            adapter = new AlltransactionsAdaptor(transactions,context);
+            recyclerView.setAdapter(adapter);
         }
 
         Query query = firestore.collection("Transactions");
-
         query.addSnapshotListener(new EventListener<QuerySnapshot>() {
             @Override
             public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException error) {

@@ -37,18 +37,27 @@ public class AlltransactionsAdaptor extends   RecyclerView.Adapter<Alltransactio
 
     @Override
     public void onBindViewHolder(@NonNull AlltransactionsAdaptor.ViewHolder holder, int position) {
-        if(mValues.get(position).getUserId().equals(auth.getCurrentUser().getUid())){
-            holder.linearLayout.setBackgroundColor(Color.parseColor("#add8e6"));
-        }
-        holder.number.setText(mValues.get(position).getMobile());
-        holder.accont.setText(mValues.get(position).getAccount());
-        holder.amount.setText(mValues.get(position).getAmount());
+        //due to initially posted bad data
+       if(mValues.get(position).getMobile()!=null
+               ||mValues.get(position).getAccount()!=null||
+               mValues.get(position).getAmount()!=null||mValues.get(position).getUserId()!=null){
+
+           holder.number.setText(mValues.get(position).getMobile());
+           holder.accont.setText(mValues.get(position).getAccount());
+           holder.amount.setText(mValues.get(position).getAmount());
+       }
+
 
     }
 
     @Override
     public int getItemCount() {
-        return mValues.size();
+        if(mValues!=null){
+            return mValues.size();
+        }else{
+            return 0;
+        }
+
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -60,9 +69,9 @@ public class AlltransactionsAdaptor extends   RecyclerView.Adapter<Alltransactio
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            number = (TextView) itemView.findViewById(R.id.amount);
-            amount = (TextView) itemView.findViewById(R.id.time);
-            accont = (TextView) itemView.findViewById(R.id.time);
+            number = (TextView) itemView.findViewById(R.id.mobile);
+            amount = (TextView) itemView.findViewById(R.id.amount);
+            accont = (TextView) itemView.findViewById(R.id.account);
             linearLayout = itemView.findViewById(R.id.layer);
 
         }

@@ -22,7 +22,7 @@ public class Transactions_Activity extends AppCompatActivity {
     //view pager
     private ViewPager viewPager;
 
-    private TextView bal;
+    private TextView bal,account;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,20 +31,26 @@ public class Transactions_Activity extends AppCompatActivity {
         Intent i = getIntent();
         String acc = i.getStringExtra("account");
         String amount = i.getStringExtra("amount");
+        TabLayout tabLayout = findViewById(R.id.tabLayout);
 
         //find toolbar
         //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
     //    setSupportActionBar(toolbar);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
-       sectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(),Transactions_Activity.this,acc);
+       sectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager(),
+               Transactions_Activity.this,acc,tabLayout.getTabCount());
         // Set up the ViewPager with the sections adapter.
         viewPager =  findViewById(R.id.viewpager);
         bal = findViewById(R.id.AccountBalance);
-        bal.setText(amount);
+        account = findViewById(R.id.accname_balance);
+        if(acc != null || amount!=null) {
+            account.setText(acc);
+            bal.setText(amount);
+        }
         viewPager.setAdapter(sectionsPagerAdapter);
         //find the tablayout and set viewpager to it
-        TabLayout tabLayout = findViewById(R.id.tabLayout);
+
         tabLayout.setupWithViewPager(viewPager);
 
 

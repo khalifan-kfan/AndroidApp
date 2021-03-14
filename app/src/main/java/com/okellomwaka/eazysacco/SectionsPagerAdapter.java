@@ -14,7 +14,7 @@ public class SectionsPagerAdapter extends FragmentStatePagerAdapter {
     String acc;
 
 
-    public SectionsPagerAdapter(@NonNull FragmentManager fm,Context context,String acc) {
+    public SectionsPagerAdapter(@NonNull FragmentManager fm,Context context,String acc,int Numberoftabs) {
         super(fm,BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         this.Numberoftabs = Numberoftabs;
         mContext = context;
@@ -44,5 +44,18 @@ public class SectionsPagerAdapter extends FragmentStatePagerAdapter {
     @Override
     public int getCount() {
         return Numberoftabs;
+    }
+    @Override
+    public CharSequence getPageTitle(int position) {
+        switch (position) {
+            case 0:
+                return "All transactions";
+            case 1:
+                return "Deposits";
+            case 2:
+                return "Withdraws";
+            default:
+                return null;
+        }
     }
 }

@@ -22,7 +22,9 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.okellomwaka.eazysacco.Models.deposit;
+import com.okellomwaka.eazysacco.Models.transaction;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -68,6 +70,7 @@ public class deposits_fragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_deposits_fragment_list, container, false);
         firestore = FirebaseFirestore.getInstance();
         auth = FirebaseAuth.getInstance();
+        mydeposist =   new ArrayList<deposit>();
 
         // Set the adapter
         if (view instanceof RecyclerView) {
@@ -78,33 +81,38 @@ public class deposits_fragment extends Fragment {
             } else {
                 recyclerView.setLayoutManager(new GridLayoutManager(context, mColumnCount));
             }
-            recyclerView.setAdapter(new DepositRecyclerViewAdapter(mydeposist,context));
+            adapter = new DepositRecyclerViewAdapter(mydeposist,context);
+            recyclerView.setAdapter(adapter);
         }
 
+        if(acc!=null) {
 
-        Query query = firestore.collection("SaccoAccounts").document(acc)
-                .collection("deposits").orderBy("deposit_timestamp", Query.Direction.DESCENDING);
-        query.addSnapshotListener(new EventListener<QuerySnapshot>() {
-            @Override
-            public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException error) {
-                if (!queryDocumentSnapshots.isEmpty()) {
+            Query query = firestore.collection("SaccoAccounts").document(acc)
+                    .collection("deposits").orderBy("deposit_timestamp", Query.Direction.DESCENDING);
+            query.addSnapshotListener(new EventListener<QuerySnapshot>() {
+                @Override
+                public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException error) {
+                    if (!queryDocumentSnapshots.isEmpty()) {
 
-                    for (DocumentChange doc : queryDocumentSnapshots.getDocumentChanges()) {
-                        if (doc.getType() == DocumentChange.Type.ADDED) {
-                            String postID = doc.getDocument().getId();
+                        for (DocumentChange doc : queryDocumentSnapshots.getDocumentChanges()) {
+                            if (doc.getType() == DocumentChange.Type.ADDED) {
+                                String postID = doc.getDocument().getId();
 
-                            final deposit d= doc.getDocument().toObject(deposit.class).withID(postID);
+                                final deposit d = doc.getDocument().toObject(deposit.class).withID(postID);
                                 mydeposist.add(d);
-                            adapter.notifyDataSetChanged();
+                                adapter.notifyDataSetChanged();
+                            }
                         }
+
+                    } else {
+                        Toast.makeText(getContext(), "no transactions", Toast.LENGTH_LONG).show();
                     }
 
-                }else {
-                    Toast.makeText(getContext(), "no transactions", Toast.LENGTH_LONG).show();
                 }
-
-            }
-        }) ;
+            });
+        }else{
+            // display accounts to select may be
+        }
         return view;
     }
 }

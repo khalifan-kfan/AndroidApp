@@ -19,6 +19,9 @@ public class deposit extends  DocId{
         this.deposit = deposit;
     }
 
+    public deposit() {
+    }
+
     public String getUser_id() {
         return user_id;
     }

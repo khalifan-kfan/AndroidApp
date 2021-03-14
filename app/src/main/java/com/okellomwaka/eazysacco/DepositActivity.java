@@ -214,7 +214,7 @@ public class DepositActivity extends AppCompatActivity implements AdapterView.On
         pay.put("transactionId",ref);
         pay.put("account", account);
         firestore.collection("Transactions")
-                .add(collmap).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
+                .add(pay).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
             @Override
             public void onComplete(@NonNull Task<DocumentReference> task) {
 
@@ -301,6 +301,10 @@ public class DepositActivity extends AppCompatActivity implements AdapterView.On
                                 });
 
                             }
+                        }else{
+                            loading.setVisibility(View.GONE);
+                            Toast.makeText(getApplicationContext(), "Did not save sorry",
+                                    Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
